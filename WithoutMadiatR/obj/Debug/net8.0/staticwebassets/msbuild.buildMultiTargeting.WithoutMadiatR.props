@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\WithoutMadiatR.props" />
+  <Import Project="../build/WithoutMadiatR.props" />
 </Project>

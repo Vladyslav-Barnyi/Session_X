@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/vladyslavbarnyi/Library/Caches/JetBrains/Rider2024.1/resharper-host/temp/Rider/vAny/CoverageData/_Session_X.19765122/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=00aa9c01_002D5146_002D4ad4_002D8a04_002Dc2f6fa620454/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=44a933be_002D1bde_002D46e5_002D93c1_002Dee58ac8fd222/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BookRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::E4FEA4E5-EE0C-4B27-8E04-62FCCB9A7CB1::net8.0::TestWithoutMediatR.BookRepositoryTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::E4FEA4E5-EE0C-4B27-8E04-62FCCB9A7CB1::net8.0::TestWithoutMediatR.BookValidatorTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::E4FEA4E5-EE0C-4B27-8E04-62FCCB9A7CB1::net8.0::TestWithoutMediatR.BookServiceTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
