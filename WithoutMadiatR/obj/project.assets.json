@@ -3024,19 +3024,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vbarnyi\\.nuget\\packages\\": {}
+    "/Users/vladyslavbarnyi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithoutMadiatR\\WithoutMadiatR.csproj",
+      "projectUniqueName": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithoutMadiatR/WithoutMadiatR.csproj",
       "projectName": "WithoutMadiatR",
-      "projectPath": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithoutMadiatR\\WithoutMadiatR.csproj",
-      "packagesPath": "C:\\Users\\vbarnyi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithoutMadiatR\\obj\\",
+      "projectPath": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithoutMadiatR/WithoutMadiatR.csproj",
+      "packagesPath": "/Users/vladyslavbarnyi/.nuget/packages/",
+      "outputPath": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithoutMadiatR/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vbarnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/vladyslavbarnyi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3106,7 +3106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

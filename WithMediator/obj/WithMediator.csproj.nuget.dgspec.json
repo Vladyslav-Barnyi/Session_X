@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithMediator\\WithMediator.csproj": {}
+    "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithMediator/WithMediator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithMediator\\WithMediator.csproj": {
+    "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithMediator/WithMediator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithMediator\\WithMediator.csproj",
+        "projectUniqueName": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithMediator/WithMediator.csproj",
         "projectName": "WithMediator",
-        "projectPath": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithMediator\\WithMediator.csproj",
-        "packagesPath": "C:\\Users\\vbarnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vbarnyi\\RiderProjects\\Session_X\\WithMediator\\obj\\",
+        "projectPath": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithMediator/WithMediator.csproj",
+        "packagesPath": "/Users/vladyslavbarnyi/.nuget/packages/",
+        "outputPath": "/Users/vladyslavbarnyi/RiderProjects/Session_X/WithMediator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vbarnyi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/vladyslavbarnyi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
