@@ -12,12 +12,12 @@ namespace TestWithoutMediatR
     public class BooksControllerTests
     {
         private readonly Mock<IBookService> _bookServiceMock;
-        private readonly BooksController _controller;
+        private readonly BooksController _sut;
 
         public BooksControllerTests()
         {
             _bookServiceMock = new Mock<IBookService>();
-            _controller = new BooksController(_bookServiceMock.Object);
+            _sut = new BooksController(_bookServiceMock.Object);
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.GetAll(ct)).ReturnsAsync(books);
 
             // Act
-            var result = await _controller.GetAllBooks(ct);
+            var result = await _sut.GetAllBooks(ct);
 
             // Assert
             var okResult = result.Result as OkObjectResult;
@@ -65,7 +65,7 @@ namespace TestWithoutMediatR
             }
 
             // Act
-            var result = await _controller.Get(idOrTitle, ct);
+            var result = await _sut.Get(idOrTitle, ct);
 
             // Assert
             var okResult = result.Result as OkObjectResult;
@@ -87,7 +87,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.GetByTitle(It.IsAny<string>(), ct)).ReturnsAsync((Book)null);
 
             // Act
-            var result = await _controller.Get(idOrTitle, ct);
+            var result = await _sut.Get(idOrTitle, ct);
 
             // Assert
             result.Result.Should().BeOfType<NotFoundResult>();
@@ -111,7 +111,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.Create(It.IsAny<Book>(), ct)).ReturnsAsync(createdBook);
 
             // Act
-            var result = await _controller.CreateBook(request, ct);
+            var result = await _sut.CreateBook(request, ct);
 
             // Assert
             result.Should().NotBeNull();
@@ -129,7 +129,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.GetById(id, ct)).ReturnsAsync((Book)null);
 
             // Act
-            var result = await _controller.UpdateBook(id, request, ct);
+            var result = await _sut.UpdateBook(id, request, ct);
 
             // Assert
             result.Result.Should().BeOfType<NotFoundResult>();
@@ -145,7 +145,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.DeleteById(id, ct)).ReturnsAsync(true);
 
             // Act
-            var result = await _controller.DeleteBook(id, ct);
+            var result = await _sut.DeleteBook(id, ct);
 
             // Assert
             result.Should().BeOfType<OkResult>();
@@ -161,7 +161,7 @@ namespace TestWithoutMediatR
             _bookServiceMock.Setup(s => s.DeleteById(id, ct)).ReturnsAsync(false);
 
             // Act
-            var result = await _controller.DeleteBook(id, ct);
+            var result = await _sut.DeleteBook(id, ct);
 
             // Assert
             result.Should().BeOfType<NotFoundResult>();

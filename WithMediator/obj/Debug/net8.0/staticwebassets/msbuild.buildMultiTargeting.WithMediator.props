@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\WithMediator.props" />
+  <Import Project="../build/WithMediator.props" />
 </Project>
