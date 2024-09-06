@@ -12,13 +12,13 @@ namespace TestWithoutMediatR;
     {
         private readonly Mock<IBookRepository> _bookRepositoryMock;
         private readonly Mock<IValidator<Book>> _bookValidatorMock;
-        private readonly IBookService _bookService;
+        private readonly IBookService _sut;
 
         public BookServiceTests()
         {
             _bookRepositoryMock = new Mock<IBookRepository>();
             _bookValidatorMock = new Mock<IValidator<Book>>();
-            _bookService = new BookService(_bookRepositoryMock.Object, _bookValidatorMock.Object);
+            _sut = new BookService(_bookRepositoryMock.Object, _bookValidatorMock.Object);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync(book);
 
             // Act
-            var result = await _bookService.Create(book, CancellationToken.None);
+            var result = await _sut.Create(book, CancellationToken.None);
 
             // Assert
             Assert.NotNull(result);
@@ -55,7 +55,7 @@ namespace TestWithoutMediatR;
                 .Returns(Task.CompletedTask);
 
             // Act
-            var result = await _bookService.Update(book, CancellationToken.None);
+            var result = await _sut.Update(book, CancellationToken.None);
 
             // Assert
             Assert.NotNull(result);
@@ -74,7 +74,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync((Book?)null);
 
             // Act & Assert
-            await Assert.ThrowsAsync<Exception>(() => _bookService.Update(book, CancellationToken.None));
+            await Assert.ThrowsAsync<Exception>(() => _sut.Update(book, CancellationToken.None));
             _bookRepositoryMock.Verify(r => r.UpdateAsync(It.IsAny<Book>(), It.IsAny<CancellationToken>()), Times.Never);
         }
 
@@ -87,7 +87,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync(book);
 
             // Act
-            var result = await _bookService.GetById(book.Id, CancellationToken.None);
+            var result = await _sut.GetById(book.Id, CancellationToken.None);
 
             // Assert
             Assert.NotNull(result);
@@ -103,7 +103,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync((Book?)null);
 
             // Act
-            var result = await _bookService.GetById(bookId, CancellationToken.None);
+            var result = await _sut.GetById(bookId, CancellationToken.None);
 
             // Assert
             Assert.Null(result);
@@ -121,7 +121,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync(validationResult);
 
             // Act & Assert
-            await Assert.ThrowsAsync<Exception>(() => _bookService.Update(book, CancellationToken.None));
+            await Assert.ThrowsAsync<Exception>(() => _sut.Update(book, CancellationToken.None));
 
             // Validate that the exception message contains the expected error
             _bookRepositoryMock.Verify(r => r.UpdateAsync(It.IsAny<Book>(), It.IsAny<CancellationToken>()), Times.Never);
@@ -138,7 +138,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync(expectedBook);
 
             // Act
-            var result = await _bookService.GetByTitle(title, CancellationToken.None);
+            var result = await _sut.GetByTitle(title, CancellationToken.None);
 
             // Assert
             Assert.NotNull(result);
@@ -158,7 +158,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync((Book?)null);
 
             // Act
-            var result = await _bookService.GetByTitle(title, CancellationToken.None);
+            var result = await _sut.GetByTitle(title, CancellationToken.None);
 
             // Assert
             Assert.Null(result);
@@ -172,7 +172,7 @@ namespace TestWithoutMediatR;
                 .ReturnsAsync(true);
 
             // Act
-            var result = await _bookService.DeleteById(bookId, CancellationToken.None);
+            var result = await _sut.DeleteById(bookId, CancellationToken.None);
 
             // Assert
             Assert.True(result);
